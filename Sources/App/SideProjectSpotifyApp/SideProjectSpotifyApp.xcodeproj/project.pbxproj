@@ -14,6 +14,10 @@
 		24677D3726A1B42500540181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24677D3526A1B42500540181 /* LaunchScreen.storyboard */; };
 		24677D4226A1B42500540181 /* SideProjectSpotifyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D4126A1B42500540181 /* SideProjectSpotifyAppTests.swift */; };
 		24677D4D26A1B42500540181 /* SideProjectSpotifyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D4C26A1B42500540181 /* SideProjectSpotifyAppUITests.swift */; };
+		2482E34D26A60CFE003E070D /* NetworkingService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E34C26A60CFE003E070D /* NetworkingService.framework */; };
+		2482E34E26A60CFE003E070D /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E34C26A60CFE003E070D /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2482E35126A60D01003E070D /* SpotifyApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E35026A60D01003E070D /* SpotifyApiModule.framework */; };
+		2482E35226A60D01003E070D /* SpotifyApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E35026A60D01003E070D /* SpotifyApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2482E34F26A60CFE003E070D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2482E35226A60D01003E070D /* SpotifyApiModule.framework in Embed Frameworks */,
+				2482E34E26A60CFE003E070D /* NetworkingService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		24677D2726A1B42200540181 /* SideProjectSpotifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpotifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24677D2A26A1B42200540181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		24677D4826A1B42500540181 /* SideProjectSpotifyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideProjectSpotifyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24677D4C26A1B42500540181 /* SideProjectSpotifyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideProjectSpotifyAppUITests.swift; sourceTree = "<group>"; };
 		24677D4E26A1B42500540181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2482E34C26A60CFE003E070D /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2482E35026A60D01003E070D /* SpotifyApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2482E35126A60D01003E070D /* SpotifyApiModule.framework in Frameworks */,
+				2482E34D26A60CFE003E070D /* NetworkingService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				24677D4026A1B42500540181 /* SideProjectSpotifyAppTests */,
 				24677D4B26A1B42500540181 /* SideProjectSpotifyAppUITests */,
 				24677D2826A1B42200540181 /* Products */,
+				2482E34B26A60CFE003E070D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +149,15 @@
 			path = SideProjectSpotifyAppUITests;
 			sourceTree = "<group>";
 		};
+		2482E34B26A60CFE003E070D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2482E35026A60D01003E070D /* SpotifyApiModule.framework */,
+				2482E34C26A60CFE003E070D /* NetworkingService.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +168,7 @@
 				24677D2326A1B42200540181 /* Sources */,
 				24677D2426A1B42200540181 /* Frameworks */,
 				24677D2526A1B42200540181 /* Resources */,
+				2482E34F26A60CFE003E070D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
