@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NetworkingService
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,16 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemPink
         
         standardGetUrlRequestWithJsonAnswer()
+    }
+    
+    func refactoredUrlRequest() {
+        
+        let client = URLSessionHTTPClient(session: URLSession.shared)
+        client.requestHttpHeaders.add(value: "Bearer BQD8NtKU2MjsTOqup1RyScIvlmZoP_x53ZGabiRSHBGqvPIkRxE7dIU8IbUhsmeZPUkec8boXLr_gst5L-o", forKey: "Authorization")
+        client.makeRequest(toURL: URL(string:"https://api.spotify.com/v1/getNewReleases")!, withHttpMethod: .get) { result in
+            //
+            let album:AlbumModelDTO = GenericDecoder.decodeResult(result: result)
+        }
     }
     
 //    curl -X "POST" -H "Authorization: Basic ZDY3MGE1OTlmZGM2NGI1ZjkyMGY4MmI0NDUwYTlhNGU6NThkZDE3NmQ4YmJhNGE3YjkzNTA4NGMwNmU3ZDNlYTE=" -d grant_type=client_credentials https://accounts.spotify.com/api/token
