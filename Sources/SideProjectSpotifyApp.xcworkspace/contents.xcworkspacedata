@@ -4,4 +4,11 @@
    <FileRef
       location = "group:App/SideProjectSpotifyApp/SideProjectSpotifyApp.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:App/SideProjectSpotifyApp/../../Modules"
+      name = "Modules">
+      <FileRef
+         location = "group:NetworkingService/NetworkingService.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

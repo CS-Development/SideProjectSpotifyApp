@@ -81,9 +81,11 @@ class ViewController: UIViewController {
 
 }
 
-public struct AlbumModelDTO: Codable {
+public struct AlbumModelDTO: DTO {
     
     public var href: String
+    public var name: String
+    public var numOfSongs: Int
     
     //
     
@@ -99,6 +101,8 @@ public struct AlbumModelDTO: Codable {
         return """
         ------------
         href = \(href)
+        name = \(name)
+        numOfSongs = \(numOfSongs)
         ------------
         """
     }
