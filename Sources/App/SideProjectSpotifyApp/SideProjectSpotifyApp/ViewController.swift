@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemPink
         
         client = URLSessionHTTPClient(session: URLSession.shared)
-        service = SpotifyApiRemote(url: URL(string: "https://accounts.spotify.com/api")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQD8NtKU2MjsTOqup1RyScIvlmZoP_x53ZGabiRSHBGqvPIkRxE7dIU8IbUhsmeZPUkec8boXLr_gst5L-o", tokenType: "Bearer", expiresIn: 3600))
+        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQBw-v1kTmkRzq_R1NNVMwuWfAvuyLYECX_RNOtt-oS25J1b8OLAdXGvTzonYp0OkXA-bXiV54Vh0xgTaoQ", tokenType: "Bearer", expiresIn: 3600))
         
         refactoredUrlRequest()
     }
