@@ -12,6 +12,7 @@
 		2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */; };
 		2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */; };
 		2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34926A60B20003E070D /* AccessTokenDTO.swift */; };
+		2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E35526A622CE003E070D /* AlbumDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsAnswerDTO.swift; sourceTree = "<group>"; };
 		2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccountRemote.swift; sourceTree = "<group>"; };
 		2482E34926A60B20003E070D /* AccessTokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDTO.swift; sourceTree = "<group>"; };
+		2482E35526A622CE003E070D /* AlbumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */,
 				2482E34926A60B20003E070D /* AccessTokenDTO.swift */,
+				2482E35526A622CE003E070D /* AlbumDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */,
 				2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */,
+				2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */,
 				2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */,
 				2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */,
 			);
