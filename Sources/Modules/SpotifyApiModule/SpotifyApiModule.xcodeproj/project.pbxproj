@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2482E33B26A6048C003E070D /* SpotifyApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2482E33926A6048C003E070D /* SpotifyApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34326A605C8003E070D /* SpotifyApiService.swift */; };
+		2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */; };
+		2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */; };
+		2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34926A60B20003E070D /* AccessTokenDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2482E33626A6048C003E070D /* SpotifyApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotifyApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2482E33926A6048C003E070D /* SpotifyApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyApiModule.h; sourceTree = "<group>"; };
 		2482E33A26A6048C003E070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2482E34326A605C8003E070D /* SpotifyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyApiService.swift; sourceTree = "<group>"; };
+		2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsAnswerDTO.swift; sourceTree = "<group>"; };
+		2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccountRemote.swift; sourceTree = "<group>"; };
+		2482E34926A60B20003E070D /* AccessTokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +54,30 @@
 		2482E33826A6048C003E070D /* SpotifyApiModule */ = {
 			isa = PBXGroup;
 			children = (
+				2482E34226A605AC003E070D /* Remote */,
+				2482E34126A605A2003E070D /* Model */,
 				2482E33926A6048C003E070D /* SpotifyApiModule.h */,
 				2482E33A26A6048C003E070D /* Info.plist */,
+				2482E34326A605C8003E070D /* SpotifyApiService.swift */,
 			);
 			path = SpotifyApiModule;
+			sourceTree = "<group>";
+		};
+		2482E34126A605A2003E070D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */,
+				2482E34926A60B20003E070D /* AccessTokenDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2482E34226A605AC003E070D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +122,7 @@
 				TargetAttributes = {
 					2482E33526A6048C003E070D = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -130,6 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */,
+				2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */,
+				2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */,
+				2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +294,7 @@
 		2482E33F26A6048C003E070D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.test.SpotifyApiModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +319,7 @@
 		2482E34026A6048C003E070D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
