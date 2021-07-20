@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246E9EFA26A745E300BB5E47 /* NetworkingService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246E9EF926A745E300BB5E47 /* NetworkingService.framework */; };
+		246E9EFB26A745E300BB5E47 /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 246E9EF926A745E300BB5E47 /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2482E33B26A6048C003E070D /* SpotifyApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2482E33926A6048C003E070D /* SpotifyApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34326A605C8003E070D /* SpotifyApiService.swift */; };
 		2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */; };
@@ -15,7 +17,22 @@
 		2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E35526A622CE003E070D /* AlbumDTO.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		246E9EFC26A745E300BB5E47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				246E9EFB26A745E300BB5E47 /* NetworkingService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		246E9EF926A745E300BB5E47 /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2482E33626A6048C003E070D /* SpotifyApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotifyApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2482E33926A6048C003E070D /* SpotifyApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyApiModule.h; sourceTree = "<group>"; };
 		2482E33A26A6048C003E070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246E9EFA26A745E300BB5E47 /* NetworkingService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246E9EF826A745E300BB5E47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				246E9EF926A745E300BB5E47 /* NetworkingService.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2482E32C26A6048C003E070D = {
 			isa = PBXGroup;
 			children = (
 				2482E33826A6048C003E070D /* SpotifyApiModule */,
 				2482E33726A6048C003E070D /* Products */,
+				246E9EF826A745E300BB5E47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +132,7 @@
 				2482E33226A6048C003E070D /* Sources */,
 				2482E33326A6048C003E070D /* Frameworks */,
 				2482E33426A6048C003E070D /* Resources */,
+				246E9EFC26A745E300BB5E47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
