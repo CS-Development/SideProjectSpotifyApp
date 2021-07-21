@@ -29,4 +29,14 @@ public class SpotifyApiRemote: SpotifyApiService {
                 completion(GenericDecoder.decodeResult(result: result))
         }
     }
+    
+    public func getAllCategories(completion: @escaping (SearchCategoriesResult) -> Void) {
+        
+        client.makeRequest(toURL: url.appendingPathComponent("browse/categories"), withHttpMethod: .get) { [weak self] result in
+                guard self != nil else { return }
+                
+                completion(GenericDecoder.decodeResult(result: result))
+        }
+    }
+    
 }
