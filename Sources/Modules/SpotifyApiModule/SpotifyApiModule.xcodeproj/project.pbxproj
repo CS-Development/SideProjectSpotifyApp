@@ -15,6 +15,8 @@
 		2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */; };
 		2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34926A60B20003E070D /* AccessTokenDTO.swift */; };
 		2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E35526A622CE003E070D /* AlbumDTO.swift */; };
+		8485290D26A8A541007FA6EA /* CategoriesAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485290C26A8A541007FA6EA /* CategoriesAnswerDTO.swift */; };
+		8485290F26A8A5AC007FA6EA /* CategoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485290E26A8A5AC007FA6EA /* CategoriesDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,8 @@
 		2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccountRemote.swift; sourceTree = "<group>"; };
 		2482E34926A60B20003E070D /* AccessTokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDTO.swift; sourceTree = "<group>"; };
 		2482E35526A622CE003E070D /* AlbumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDTO.swift; sourceTree = "<group>"; };
+		8485290C26A8A541007FA6EA /* CategoriesAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAnswerDTO.swift; sourceTree = "<group>"; };
+		8485290E26A8A5AC007FA6EA /* CategoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */,
 				2482E34926A60B20003E070D /* AccessTokenDTO.swift */,
 				2482E35526A622CE003E070D /* AlbumDTO.swift */,
+				8485290C26A8A541007FA6EA /* CategoriesAnswerDTO.swift */,
+				8485290E26A8A5AC007FA6EA /* CategoriesDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,7 +198,9 @@
 			files = (
 				2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */,
 				2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */,
+				8485290F26A8A5AC007FA6EA /* CategoriesDTO.swift in Sources */,
 				2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */,
+				8485290D26A8A541007FA6EA /* CategoriesAnswerDTO.swift in Sources */,
 				2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */,
 				2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */,
 			);
