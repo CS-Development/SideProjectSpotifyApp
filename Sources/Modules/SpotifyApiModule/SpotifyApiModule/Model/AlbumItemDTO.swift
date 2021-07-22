@@ -1,16 +1,16 @@
 //
-//  CategoriesDTO.swift
+//  AlbumItemDTO.swift
 //  SpotifyApiModule
 //
-//  Created by Pawel Kacela on 21/07/2021.
+//  Created by Pawel Kacela on 22/07/2021.
 //
 
 import NetworkingService
 
-public struct CategoriesDTO: DTO {
+public struct AlbumItemDTO: DTO {
     
     public var href: String
-    public var albumGroup: String
+    public var albumGroup: String?
     public var albumType: String
     public var artists: [SimplifiedArtistObjectDTO]
     public var availableMarkets: [String]
@@ -20,7 +20,7 @@ public struct CategoriesDTO: DTO {
     public var name: String
     public var releaseDate: String
     public var releaseDatePrecision: String
-    public var restrictions: AlbumRestrictionObjectDTO
+    public var restrictions: AlbumRestrictionObjectDTO?
     public var totalTracks: Int
     public var type: String
     public var uri: String
@@ -28,7 +28,7 @@ public struct CategoriesDTO: DTO {
     public var description: String {
         return """
         ------------
-        album_group = \(albumGroup)
+        album_group = \(albumGroup ?? "nil")
         album_type = \(albumType)
         artists = \(artists)
         available_markets = \(availableMarkets)

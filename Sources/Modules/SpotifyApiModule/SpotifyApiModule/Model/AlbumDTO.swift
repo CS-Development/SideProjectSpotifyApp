@@ -10,11 +10,13 @@ import NetworkingService
 public struct AlbumDTO: DTO {
     
     public var href: String
+    public var items: [AlbumItemDTO]
 
     public var description: String {
         return """
         ------------
         href = \(href)
+        items = \(items)
         ------------
         """
     }
