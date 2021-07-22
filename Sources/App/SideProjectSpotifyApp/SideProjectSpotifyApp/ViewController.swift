@@ -21,10 +21,10 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemPink
         
         client = URLSessionHTTPClient(session: URLSession.shared)
-        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQBw-v1kTmkRzq_R1NNVMwuWfAvuyLYECX_RNOtt-oS25J1b8OLAdXGvTzonYp0OkXA-bXiV54Vh0xgTaoQ", tokenType: "Bearer", expiresIn: 3600))
+        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQBEHmFX2AMIynvMC8SPtifw4GzNWQh-mzshoDEUi_FiMMnqj5I_dnWjJVuhb5Csk2aTdHNuuW43miwGMuY84enbv44_LiRxozC2bY9QpgTKfytICUrBp2hZpBnRqabVSzQTGRRiN549nRXevtOGjy2IHvjjTVXy2UU", tokenType: "Bearer", expiresIn: 3600))
         
-//        refactoredUrlRequest()
-        getCategories()
+        refactoredUrlRequest()
+//        getCategories()
     }
     
     func getCategories() {
