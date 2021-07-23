@@ -9,16 +9,16 @@ import NetworkingService
 
 public struct ImageObjectDTO: DTO {
     
-    public var height: Int
+    public var height: Int?
     public var url: String
-    public var width: Int
+    public var width: Int?
     
     public var description: String {
         return """
         ------------
-        height = \(height)
+        height = \(height as Any)
         url = \(url)
-        width = \(width)
+        width = \(width as Any)
         ------------
         """
     }
