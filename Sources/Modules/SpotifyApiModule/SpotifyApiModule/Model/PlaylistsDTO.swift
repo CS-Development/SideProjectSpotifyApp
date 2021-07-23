@@ -1,16 +1,16 @@
 //
-//  CategoriesDTO.swift
+//  PlaylistsDTO.swift
 //  SpotifyApiModule
 //
-//  Created by Pawel Kacela on 21/07/2021.
+//  Created by Pawel Kacela on 23/07/2021.
 //
 
 import NetworkingService
 
-public struct CategoriesDTO: DTO {
+public struct PlaylistsDTO: DTO {
     
     public var href: String
-    public var items: [CategoryItemDTO]
+    public var items: [PlaylistItemDTO]
 
     public var description: String {
         return """
@@ -20,5 +20,4 @@ public struct CategoriesDTO: DTO {
         ------------
         """
     }
-    
 }
