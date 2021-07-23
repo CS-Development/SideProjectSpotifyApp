@@ -17,6 +17,12 @@
 		2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E35526A622CE003E070D /* AlbumDTO.swift */; };
 		847DE86126A9F2C800FF716B /* AlbumItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86026A9F2C800FF716B /* AlbumItemDTO.swift */; };
 		847DE86326AB13FB00FF716B /* CategoryItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86226AB13FB00FF716B /* CategoryItemDTO.swift */; };
+		847DE86526AB1E6200FF716B /* PlaylistsAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86426AB1E6200FF716B /* PlaylistsAnswerDTO.swift */; };
+		847DE86726AB1EA800FF716B /* PlaylistsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86626AB1EA800FF716B /* PlaylistsDTO.swift */; };
+		847DE86926AB1F0700FF716B /* PlaylistItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86826AB1F0700FF716B /* PlaylistItemDTO.swift */; };
+		847DE86B26AB22C100FF716B /* PublicUserObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86A26AB22C100FF716B /* PublicUserObjectDTO.swift */; };
+		847DE86D26AB231E00FF716B /* PlaylistTracksRefObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86C26AB231E00FF716B /* PlaylistTracksRefObjectDTO.swift */; };
+		847DE86F26AB264400FF716B /* FollowersObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86E26AB264400FF716B /* FollowersObjectDTO.swift */; };
 		8485290D26A8A541007FA6EA /* CategoriesAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485290C26A8A541007FA6EA /* CategoriesAnswerDTO.swift */; };
 		8485290F26A8A5AC007FA6EA /* CategoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485290E26A8A5AC007FA6EA /* CategoriesDTO.swift */; };
 		8485291126A9E7B3007FA6EA /* SimplifiedArtistObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485291026A9E7B3007FA6EA /* SimplifiedArtistObjectDTO.swift */; };
@@ -51,6 +57,12 @@
 		2482E35526A622CE003E070D /* AlbumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDTO.swift; sourceTree = "<group>"; };
 		847DE86026A9F2C800FF716B /* AlbumItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemDTO.swift; sourceTree = "<group>"; };
 		847DE86226AB13FB00FF716B /* CategoryItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemDTO.swift; sourceTree = "<group>"; };
+		847DE86426AB1E6200FF716B /* PlaylistsAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsAnswerDTO.swift; sourceTree = "<group>"; };
+		847DE86626AB1EA800FF716B /* PlaylistsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsDTO.swift; sourceTree = "<group>"; };
+		847DE86826AB1F0700FF716B /* PlaylistItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemDTO.swift; sourceTree = "<group>"; };
+		847DE86A26AB22C100FF716B /* PublicUserObjectDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUserObjectDTO.swift; sourceTree = "<group>"; };
+		847DE86C26AB231E00FF716B /* PlaylistTracksRefObjectDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTracksRefObjectDTO.swift; sourceTree = "<group>"; };
+		847DE86E26AB264400FF716B /* FollowersObjectDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersObjectDTO.swift; sourceTree = "<group>"; };
 		8485290C26A8A541007FA6EA /* CategoriesAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAnswerDTO.swift; sourceTree = "<group>"; };
 		8485290E26A8A5AC007FA6EA /* CategoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDTO.swift; sourceTree = "<group>"; };
 		8485291026A9E7B3007FA6EA /* SimplifiedArtistObjectDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedArtistObjectDTO.swift; sourceTree = "<group>"; };
@@ -122,6 +134,12 @@
 				8485291226A9E8BB007FA6EA /* ExternalUrlObjectDTO.swift */,
 				8485291426A9E918007FA6EA /* ImageObjectDTO.swift */,
 				8485291626A9E9A9007FA6EA /* AlbumRestrictionObjectDTO.swift */,
+				847DE86426AB1E6200FF716B /* PlaylistsAnswerDTO.swift */,
+				847DE86626AB1EA800FF716B /* PlaylistsDTO.swift */,
+				847DE86826AB1F0700FF716B /* PlaylistItemDTO.swift */,
+				847DE86A26AB22C100FF716B /* PublicUserObjectDTO.swift */,
+				847DE86C26AB231E00FF716B /* PlaylistTracksRefObjectDTO.swift */,
+				847DE86E26AB264400FF716B /* FollowersObjectDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,17 +234,23 @@
 			files = (
 				2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */,
 				8485291726A9E9A9007FA6EA /* AlbumRestrictionObjectDTO.swift in Sources */,
+				847DE86D26AB231E00FF716B /* PlaylistTracksRefObjectDTO.swift in Sources */,
 				2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */,
+				847DE86526AB1E6200FF716B /* PlaylistsAnswerDTO.swift in Sources */,
 				8485290F26A8A5AC007FA6EA /* CategoriesDTO.swift in Sources */,
 				847DE86126A9F2C800FF716B /* AlbumItemDTO.swift in Sources */,
 				847DE86326AB13FB00FF716B /* CategoryItemDTO.swift in Sources */,
 				8485291326A9E8BB007FA6EA /* ExternalUrlObjectDTO.swift in Sources */,
+				847DE86926AB1F0700FF716B /* PlaylistItemDTO.swift in Sources */,
 				2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */,
 				8485290D26A8A541007FA6EA /* CategoriesAnswerDTO.swift in Sources */,
 				8485291526A9E918007FA6EA /* ImageObjectDTO.swift in Sources */,
 				8485291126A9E7B3007FA6EA /* SimplifiedArtistObjectDTO.swift in Sources */,
 				2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */,
+				847DE86F26AB264400FF716B /* FollowersObjectDTO.swift in Sources */,
 				2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */,
+				847DE86B26AB22C100FF716B /* PublicUserObjectDTO.swift in Sources */,
+				847DE86726AB1EA800FF716B /* PlaylistsDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

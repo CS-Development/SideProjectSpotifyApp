@@ -19,4 +19,10 @@ public protocol SpotifyApiService {
     typealias SearchCategoriesResult = Swift.Result<CategoriesAnswerDTO, ServiceError>
     
     func getAllCategories(completion: @escaping (SearchCategoriesResult) -> Void)
+    
+    
+    typealias SearchPlaylistsResult = Swift.Result<PlaylistsAnswerDTO, ServiceError>
+    
+    func getAllFeaturedPlaylists(completion: @escaping (SearchPlaylistsResult) -> Void)
+    
 }

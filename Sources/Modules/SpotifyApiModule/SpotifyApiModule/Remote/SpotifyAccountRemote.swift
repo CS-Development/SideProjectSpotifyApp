@@ -39,4 +39,13 @@ public class SpotifyApiRemote: SpotifyApiService {
         }
     }
     
+    
+    public func getAllFeaturedPlaylists(completion: @escaping (SearchPlaylistsResult) -> Void) {
+        client.makeRequest(toURL: url.appendingPathComponent("browse/featured-playlists"), withHttpMethod: .get) { [weak self] result in
+                guard self != nil else { return }
+                
+                completion(GenericDecoder.decodeResult(result: result))
+        }
+    }
+    
 }
