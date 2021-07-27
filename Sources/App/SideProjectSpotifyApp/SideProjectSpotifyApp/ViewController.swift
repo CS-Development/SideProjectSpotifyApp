@@ -11,18 +11,22 @@ import SpotifyApiModule
 
 class ViewController: UIViewController {
 
-    var client: URLSessionHTTPClient!
-    var service: SpotifyApiRemote!
+    var service: SpotifyApiService
+    
+    init(service: SpotifyApiService) {
+        self.service = service
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         view.backgroundColor = .systemPink
-        
-        client = URLSessionHTTPClient(session: URLSession.shared)
-        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQBEHmFX2AMIynvMC8SPtifw4GzNWQh-mzshoDEUi_FiMMnqj5I_dnWjJVuhb5Csk2aTdHNuuW43miwGMuY84enbv44_LiRxozC2bY9QpgTKfytICUrBp2hZpBnRqabVSzQTGRRiN549nRXevtOGjy2IHvjjTVXy2UU", tokenType: "Bearer", expiresIn: 3600))
-        
 //        refactoredUrlRequest()
 //        getCategories()
         getFeaturedPlaylists()

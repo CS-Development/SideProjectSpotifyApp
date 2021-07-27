@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import NetworkingService
+import SpotifyApiModule
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var client: HTTPClient!
+    var service: SpotifyApiService!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -23,7 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = ViewController(nibName: nil, bundle: nil)
+        client = URLSessionHTTPClient(session: URLSession.shared)
+        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQCtrbDNVESQ0cMeZjvXIIXS5rGAUdmzcLPIi7_uNpLCMGMhXnA3sVvGXjuqm0idAwwc7S9LTm0kfQEEn6s", tokenType: "Bearer", expiresIn: 3600))
+        
+        window?.rootViewController = ViewController(service: service)
         
     }
 
