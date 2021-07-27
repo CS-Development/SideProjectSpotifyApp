@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import SideProjectSpotifyApp
+import SpotifyApiModule
 
 class SideProjectSpotifyAppTests: XCTestCase {
 
@@ -21,6 +22,12 @@ class SideProjectSpotifyAppTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let fakeService = FakeService()
+        let viewController = ViewController(service: fakeService)
+        viewController.viewDidLoad()
+        
+        XCTAssertTrue(fakeService.getAllNewReleasesWasCalled)
     }
 
     func testPerformanceExample() throws {
@@ -30,4 +37,20 @@ class SideProjectSpotifyAppTests: XCTestCase {
         }
     }
 
+}
+
+class FakeService: SpotifyApiService {
+    var getAllNewReleasesWasCalled = false
+    
+    func getAllNewReleases(completion: @escaping (SearchResult) -> Void) {
+        getAllNewReleasesWasCalled = true
+    }
+    
+    func getAllCategories(completion: @escaping (SearchCategoriesResult) -> Void) {
+        
+    }
+    
+    func getAllFeaturedPlaylists(completion: @escaping (SearchPlaylistsResult) -> Void) {
+        
+    }
 }
