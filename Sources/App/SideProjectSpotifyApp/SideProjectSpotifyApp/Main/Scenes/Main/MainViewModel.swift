@@ -10,10 +10,12 @@ import SpotifyApiModule
 
 final class MainViewModel {
     
+    var playlistItems: [PlaylistItemDTO]
     var service: SpotifyApiService
     
     init(service: SpotifyApiService) {
         self.service = service
+        self.playlistItems = [PlaylistItemDTO]()
     }
     
     func getFeaturedPlaylists() {
@@ -23,6 +25,7 @@ final class MainViewModel {
                 print(error)
             case let .success(dto):
                 print(dto)
+                self.playlistItems = dto.playlists.items
             }
         }
     }
