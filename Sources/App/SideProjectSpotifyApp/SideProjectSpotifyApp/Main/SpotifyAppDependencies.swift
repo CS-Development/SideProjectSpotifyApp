@@ -39,12 +39,22 @@ class SpotifyAppDependencies {
     }
     
     func start() {
-        setRootViewController(makeMainViewController())
+        setRootViewController(makeMainTabBarController())
     }
     
     func makeMainViewController() -> UIViewController {
         let viewModel = MainViewModel(service: service)
         let viewController = ViewController(viewModel: viewModel)
         return viewController
+    }
+    
+    func makeMainTabBarController() -> UIViewController {
+        let vc1 = UIViewController()
+        vc1.view.backgroundColor = .yellow
+        
+        let vc2 = UIViewController()
+        vc2.view.backgroundColor = .blue
+        let tabController = MainTabBarController(viewControllers: [makeMainViewController(), vc1, vc2])
+        return tabController
     }
 }
