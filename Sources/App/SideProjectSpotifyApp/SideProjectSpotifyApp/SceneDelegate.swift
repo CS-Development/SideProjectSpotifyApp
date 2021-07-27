@@ -6,31 +6,16 @@
 //
 
 import UIKit
-import NetworkingService
-import SpotifyApiModule
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var client: HTTPClient!
-    var service: SpotifyApiService!
+    var appDependencies = SpotifyAppDependencies.shared
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        
-        window?.makeKeyAndVisible()
-        
-        client = URLSessionHTTPClient(session: URLSession.shared)
-        service = SpotifyApiRemote(url: URL(string: "https://api.spotify.com/v1")!, client: client, accessToken: AccessTokenDTO(accessToken: "BQCtrbDNVESQ0cMeZjvXIIXS5rGAUdmzcLPIi7_uNpLCMGMhXnA3sVvGXjuqm0idAwwc7S9LTm0kfQEEn6s", tokenType: "Bearer", expiresIn: 3600))
-        
-        window?.rootViewController = ViewController(service: service)
-        
+        appDependencies.setScene(scene)
+        appDependencies.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
