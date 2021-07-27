@@ -39,6 +39,12 @@ class SpotifyAppDependencies {
     }
     
     func start() {
-        setRootViewController(ViewController(service: service))
+        setRootViewController(makeMainViewController())
+    }
+    
+    func makeMainViewController() -> UIViewController {
+        let viewModel = MainViewModel(service: service)
+        let viewController = ViewController(viewModel: viewModel)
+        return viewController
     }
 }

@@ -1,35 +1,19 @@
 //
-//  ViewController.swift
+//  MainViewModel.swift
 //  SideProjectSpotifyApp
 //
-//  Created by Christian Slanzi on 16.07.21.
+//  Created by Christian Slanzi on 27.07.21.
 //
 
-import UIKit
-import NetworkingService
+import Foundation
 import SpotifyApiModule
 
-class ViewController: UIViewController {
-
+final class MainViewModel {
+    
     var service: SpotifyApiService
     
     init(service: SpotifyApiService) {
         self.service = service
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        view.backgroundColor = .systemPink
-//        refactoredUrlRequest()
-//        getCategories()
-        getFeaturedPlaylists()
     }
     
     func getFeaturedPlaylists() {
@@ -65,4 +49,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

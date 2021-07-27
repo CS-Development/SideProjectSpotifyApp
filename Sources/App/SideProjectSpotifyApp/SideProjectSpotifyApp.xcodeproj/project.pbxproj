@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */; };
+		2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4FD26B082A400A67703 /* MainViewModel.swift */; };
 		24677D2B26A1B42200540181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2A26A1B42200540181 /* AppDelegate.swift */; };
 		24677D2D26A1B42200540181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2C26A1B42200540181 /* SceneDelegate.swift */; };
 		24677D2F26A1B42200540181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2E26A1B42200540181 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppDependencies.swift; sourceTree = "<group>"; };
+		2446F4FD26B082A400A67703 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		24677D2726A1B42200540181 /* SideProjectSpotifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpotifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24677D2A26A1B42200540181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24677D2C26A1B42200540181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +104,25 @@
 		2446F4F826B07CCC00A67703 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2446F4FB26B0824800A67703 /* Scenes */,
 				2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2446F4FB26B0824800A67703 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2446F4FC26B0827A00A67703 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2446F4FC26B0827A00A67703 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				24677D2E26A1B42200540181 /* ViewController.swift */,
+				2446F4FD26B082A400A67703 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -134,7 +154,6 @@
 				2446F4F826B07CCC00A67703 /* Main */,
 				24677D2A26A1B42200540181 /* AppDelegate.swift */,
 				24677D2C26A1B42200540181 /* SceneDelegate.swift */,
-				24677D2E26A1B42200540181 /* ViewController.swift */,
 				24677D3326A1B42500540181 /* Assets.xcassets */,
 				24677D3526A1B42500540181 /* LaunchScreen.storyboard */,
 				24677D3826A1B42500540181 /* Info.plist */,
@@ -299,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */,
 				24677D2F26A1B42200540181 /* ViewController.swift in Sources */,
 				2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */,
 				24677D2B26A1B42200540181 /* AppDelegate.swift in Sources */,
