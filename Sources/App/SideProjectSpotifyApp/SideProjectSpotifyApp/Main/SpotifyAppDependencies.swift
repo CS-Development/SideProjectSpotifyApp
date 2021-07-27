@@ -44,8 +44,13 @@ class SpotifyAppDependencies {
     
     func makeMainViewController() -> UIViewController {
         let viewModel = MainViewModel(service: service)
-        let viewController = ViewController(viewModel: viewModel)
-        return viewController
+        let router = ViewControllerRouter()
+        
+        let viewController = ViewController(viewModel: viewModel, router: router)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        router.navigationController = navigationController
+        return navigationController
     }
     
     func makeMainTabBarController() -> UIViewController {
@@ -58,3 +63,29 @@ class SpotifyAppDependencies {
         return tabController
     }
 }
+
+//extension SpotifyAppDependencies: ViewControllerRouting {
+//    func routeToDetailViewController() {
+//        let vc = UIViewController()
+//        vc.view.backgroundColor = .brown
+//
+//        //setRootViewController(vc)
+//    }
+//}
+
+class ViewControllerRouter: ViewControllerRouting {
+    var navigationController: UINavigationController?
+    
+//    init(navigationController: UINavigationController) {
+//        self.navigationController = navigationController
+//    }
+    
+    func routeToDetailViewController() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .brown
+
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+
