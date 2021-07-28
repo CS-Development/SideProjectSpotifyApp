@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2430DE5226B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; };
+		2430DE5326B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */; };
 		2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4FD26B082A400A67703 /* MainViewModel.swift */; };
 		2446F50226B08C3200A67703 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F50126B08C3200A67703 /* MainTabBarController.swift */; };
@@ -49,6 +51,7 @@
 			files = (
 				2482E35226A60D01003E070D /* SpotifyApiModule.framework in Embed Frameworks */,
 				2482E34E26A60CFE003E070D /* NetworkingService.framework in Embed Frameworks */,
+				2430DE5326B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyAccountApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppDependencies.swift; sourceTree = "<group>"; };
 		2446F4FD26B082A400A67703 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2446F50126B08C3200A67703 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			files = (
 				2482E35126A60D01003E070D /* SpotifyApiModule.framework in Frameworks */,
 				2482E34D26A60CFE003E070D /* NetworkingService.framework in Frameworks */,
+				2430DE5226B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +206,7 @@
 		2482E34B26A60CFE003E070D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */,
 				2482E35026A60D01003E070D /* SpotifyApiModule.framework */,
 				2482E34C26A60CFE003E070D /* NetworkingService.framework */,
 			);
