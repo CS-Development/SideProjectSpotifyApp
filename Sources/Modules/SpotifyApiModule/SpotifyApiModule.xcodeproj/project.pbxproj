@@ -12,7 +12,7 @@
 		2482E33B26A6048C003E070D /* SpotifyApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2482E33926A6048C003E070D /* SpotifyApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2482E34426A605C9003E070D /* SpotifyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34326A605C8003E070D /* SpotifyApiService.swift */; };
 		2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */; };
-		2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */; };
+		2482E34826A6090B003E070D /* SpotifyApiRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34726A6090B003E070D /* SpotifyApiRemote.swift */; };
 		2482E34A26A60B20003E070D /* AccessTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E34926A60B20003E070D /* AccessTokenDTO.swift */; };
 		2482E35626A622CE003E070D /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482E35526A622CE003E070D /* AlbumDTO.swift */; };
 		847DE86126A9F2C800FF716B /* AlbumItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DE86026A9F2C800FF716B /* AlbumItemDTO.swift */; };
@@ -52,7 +52,7 @@
 		2482E33A26A6048C003E070D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2482E34326A605C8003E070D /* SpotifyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyApiService.swift; sourceTree = "<group>"; };
 		2482E34526A6086E003E070D /* AlbumsAnswerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsAnswerDTO.swift; sourceTree = "<group>"; };
-		2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccountRemote.swift; sourceTree = "<group>"; };
+		2482E34726A6090B003E070D /* SpotifyApiRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyApiRemote.swift; sourceTree = "<group>"; };
 		2482E34926A60B20003E070D /* AccessTokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenDTO.swift; sourceTree = "<group>"; };
 		2482E35526A622CE003E070D /* AlbumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDTO.swift; sourceTree = "<group>"; };
 		847DE86026A9F2C800FF716B /* AlbumItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemDTO.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		2482E34226A605AC003E070D /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				2482E34726A6090B003E070D /* SpotifyAccountRemote.swift */,
+				2482E34726A6090B003E070D /* SpotifyApiRemote.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 				8485290D26A8A541007FA6EA /* CategoriesAnswerDTO.swift in Sources */,
 				8485291526A9E918007FA6EA /* ImageObjectDTO.swift in Sources */,
 				8485291126A9E7B3007FA6EA /* SimplifiedArtistObjectDTO.swift in Sources */,
-				2482E34826A6090B003E070D /* SpotifyAccountRemote.swift in Sources */,
+				2482E34826A6090B003E070D /* SpotifyApiRemote.swift in Sources */,
 				847DE86F26AB264400FF716B /* FollowersObjectDTO.swift in Sources */,
 				2482E34626A6086E003E070D /* AlbumsAnswerDTO.swift in Sources */,
 				847DE86B26AB22C100FF716B /* PublicUserObjectDTO.swift in Sources */,

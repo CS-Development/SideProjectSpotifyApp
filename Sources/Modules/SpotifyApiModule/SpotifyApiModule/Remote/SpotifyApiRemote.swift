@@ -1,5 +1,5 @@
 //
-//  SpotifyAccountRemote.swift
+//  SpotifyApiRemote.swift
 //  SpotifyApiModule
 //
 //  Created by Christian Slanzi on 19.07.21.
