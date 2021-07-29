@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SpotifyApiModule
+
+class AlbumCellViewModel {
+    
+    let title: String
+    let image: Data
+    
+    init(title: String, image: Data) {
+        self.title = title
+        self.image = image
+    }
+    
+}

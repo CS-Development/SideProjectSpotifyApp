@@ -27,6 +27,8 @@
 		844B5D2E26B311D4009E71B0 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */; };
 		844B5D3026B3127E009E71B0 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */; };
 		844B5D3326B32241009E71B0 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D3226B32241009E71B0 /* AlbumCell.swift */; };
+		844B5D3626B32721009E71B0 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D3526B32721009E71B0 /* CALayer+Extensions.swift */; };
+		844B5D3826B33255009E71B0 /* AlbumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D3726B33255009E71B0 /* AlbumCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		844B5D3226B32241009E71B0 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		844B5D3526B32721009E71B0 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		844B5D3726B33255009E71B0 /* AlbumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		2446F4FF26B08C0A00A67703 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				844B5D3426B326D3009E71B0 /* Extensions */,
 				2446F50026B08C1F00A67703 /* UI */,
 			);
 			path = Common;
@@ -237,8 +242,17 @@
 			isa = PBXGroup;
 			children = (
 				844B5D3226B32241009E71B0 /* AlbumCell.swift */,
+				844B5D3726B33255009E71B0 /* AlbumCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		844B5D3426B326D3009E71B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				844B5D3526B32721009E71B0 /* CALayer+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,7 +389,9 @@
 				844B5D3026B3127E009E71B0 /* AlbumsViewModel.swift in Sources */,
 				844B5D2E26B311D4009E71B0 /* AlbumsViewController.swift in Sources */,
 				2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */,
+				844B5D3626B32721009E71B0 /* CALayer+Extensions.swift in Sources */,
 				24677D2F26A1B42200540181 /* ViewController.swift in Sources */,
+				844B5D3826B33255009E71B0 /* AlbumCellViewModel.swift in Sources */,
 				2446F50226B08C3200A67703 /* MainTabBarController.swift in Sources */,
 				2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */,
 				24677D2B26A1B42200540181 /* AppDelegate.swift in Sources */,

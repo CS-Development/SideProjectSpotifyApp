@@ -38,6 +38,11 @@ class AlbumCell: UICollectionViewCell {
         setupLayout()
     }
     
+    func update(viewModel: AlbumCellViewModel) {
+        titleLabel.text = viewModel.title
+        albumImage.image = UIImage(data: viewModel.image)
+    }
+    
     private func setupViews(){
         backgroundColor = .white
         layer.cornerRadius = cornerRadiusValue

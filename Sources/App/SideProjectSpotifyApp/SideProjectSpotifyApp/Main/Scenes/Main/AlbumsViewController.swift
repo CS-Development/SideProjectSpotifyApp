@@ -55,7 +55,7 @@ class AlbumsViewController: UIViewController {
     
     private func setupViews() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         collectionView.delegate = delgate
         collectionView.dataSource = dataSource
     }
@@ -86,11 +86,15 @@ class AlbumsCollectionViewDelagate: NSObject, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width - 32, height: 100)
+        return CGSize(width: collectionView.frame.width - 32, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
     }
 }
 
@@ -109,6 +113,12 @@ class AlbumsCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCell.identifier, for: indexPath) as! AlbumCell
+        
+        switch viewModel.cell(at: indexPath) {
+        case .album(let albumCellViewModel):
+            cell.update(viewModel: albumCellViewModel)
+        }
+        
         return cell
     }
     
