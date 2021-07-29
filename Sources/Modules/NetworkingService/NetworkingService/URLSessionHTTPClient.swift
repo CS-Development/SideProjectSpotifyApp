@@ -46,7 +46,7 @@ public class URLSessionHTTPClient: HTTPClient {
             
             let bodyString = httpBodyParameters
                 .allValues()
-                .map { "\($0)=\(String(describing: $1.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)))" }
+                .map { "\($0)=\(String(describing: $1.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!))" }
                 .joined(separator: "&")
             return bodyString.data(using: .utf8)
             
@@ -93,6 +93,14 @@ public class URLSessionHTTPClient: HTTPClient {
         
         request.httpBody = httpBody
         return request
+    }
+    
+    public func clearRequest() {
+        requestHttpHeaders.removeAll()
+        urlQueryParameters.removeAll()
+        httpBodyParameters.removeAll()
+        
+        httpBody = nil
     }
     
     public func makeRequest(toURL url: URL,
