@@ -24,6 +24,8 @@
 		2482E34E26A60CFE003E070D /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E34C26A60CFE003E070D /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2482E35126A60D01003E070D /* SpotifyApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E35026A60D01003E070D /* SpotifyApiModule.framework */; };
 		2482E35226A60D01003E070D /* SpotifyApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2482E35026A60D01003E070D /* SpotifyApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		844B5D2E26B311D4009E71B0 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */; };
+		844B5D3026B3127E009E71B0 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		24677D4E26A1B42500540181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2482E34C26A60CFE003E070D /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2482E35026A60D01003E070D /* SpotifyApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 			children = (
 				24677D2E26A1B42200540181 /* ViewController.swift */,
 				2446F4FD26B082A400A67703 /* MainViewModel.swift */,
+				844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */,
+				844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -355,6 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844B5D3026B3127E009E71B0 /* AlbumsViewModel.swift in Sources */,
+				844B5D2E26B311D4009E71B0 /* AlbumsViewController.swift in Sources */,
 				2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */,
 				24677D2F26A1B42200540181 /* ViewController.swift in Sources */,
 				2446F50226B08C3200A67703 /* MainTabBarController.swift in Sources */,
