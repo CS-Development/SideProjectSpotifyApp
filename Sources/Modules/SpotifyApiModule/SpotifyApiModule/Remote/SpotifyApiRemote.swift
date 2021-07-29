@@ -1,5 +1,5 @@
 //
-//  SpotifyAccountRemote.swift
+//  SpotifyApiRemote.swift
 //  SpotifyApiModule
 //
 //  Created by Christian Slanzi on 19.07.21.
@@ -17,6 +17,13 @@ public class SpotifyApiRemote: SpotifyApiService {
         self.url = url
         self.client = client
         self.accessToken = accessToken
+        //self.client.requestHttpHeaders.add(value: "\(accessToken.tokenType) \(accessToken.accessToken)"
+        //                              , forKey: "Authorization")
+    }
+    
+    public func setAccessToken(_ token: AccessTokenDTO) {
+        self.accessToken = token
+        self.client.clearRequest()
         self.client.requestHttpHeaders.add(value: "\(accessToken.tokenType) \(accessToken.accessToken)"
                                       , forKey: "Authorization")
     }

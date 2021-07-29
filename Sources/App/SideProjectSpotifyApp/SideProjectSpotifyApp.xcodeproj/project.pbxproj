@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2430DE5226B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; };
+		2430DE5326B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */; };
 		2446F4FE26B082A400A67703 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4FD26B082A400A67703 /* MainViewModel.swift */; };
 		2446F50226B08C3200A67703 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F50126B08C3200A67703 /* MainTabBarController.swift */; };
+		2459E21126B2B27900F08FEB /* Secrets in Resources */ = {isa = PBXBuildFile; fileRef = 2459E21026B2B27900F08FEB /* Secrets */; };
 		24677D2B26A1B42200540181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2A26A1B42200540181 /* AppDelegate.swift */; };
 		24677D2D26A1B42200540181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2C26A1B42200540181 /* SceneDelegate.swift */; };
 		24677D2F26A1B42200540181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24677D2E26A1B42200540181 /* ViewController.swift */; };
@@ -49,6 +52,7 @@
 			files = (
 				2482E35226A60D01003E070D /* SpotifyApiModule.framework in Embed Frameworks */,
 				2482E34E26A60CFE003E070D /* NetworkingService.framework in Embed Frameworks */,
+				2430DE5326B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,9 +60,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyAccountApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppDependencies.swift; sourceTree = "<group>"; };
 		2446F4FD26B082A400A67703 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2446F50126B08C3200A67703 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2459E21026B2B27900F08FEB /* Secrets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Secrets; sourceTree = "<group>"; };
 		24677D2726A1B42200540181 /* SideProjectSpotifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpotifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24677D2A26A1B42200540181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24677D2C26A1B42200540181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 			files = (
 				2482E35126A60D01003E070D /* SpotifyApiModule.framework in Frameworks */,
 				2482E34D26A60CFE003E070D /* NetworkingService.framework in Frameworks */,
+				2430DE5226B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +113,7 @@
 		2446F4F826B07CCC00A67703 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2459E20F26B2B25E00F08FEB /* Resources */,
 				2446F4FF26B08C0A00A67703 /* Common */,
 				2446F4FB26B0824800A67703 /* Scenes */,
 				2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */,
@@ -144,6 +152,14 @@
 				2446F50126B08C3200A67703 /* MainTabBarController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2459E20F26B2B25E00F08FEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2459E21026B2B27900F08FEB /* Secrets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		24677D1E26A1B42200540181 = {
@@ -201,6 +217,7 @@
 		2482E34B26A60CFE003E070D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */,
 				2482E35026A60D01003E070D /* SpotifyApiModule.framework */,
 				2482E34C26A60CFE003E070D /* NetworkingService.framework */,
 			);
@@ -311,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2459E21126B2B27900F08FEB /* Secrets in Resources */,
 				24677D3726A1B42500540181 /* LaunchScreen.storyboard in Resources */,
 				24677D3426A1B42500540181 /* Assets.xcassets in Resources */,
 			);

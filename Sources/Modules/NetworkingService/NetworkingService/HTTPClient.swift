@@ -17,6 +17,7 @@ public protocol HTTPClient {
     var urlQueryParameters: HTTPClientEntity { get set }
     var httpBodyParameters: HTTPClientEntity { get set }
     
+    func clearRequest()
     
     @discardableResult
     func makeRequest(toURL url: URL,
@@ -77,6 +78,10 @@ public struct HTTPClientEntity {
     
     public func totalItems() -> Int {
         return values.count
+    }
+    
+    public mutating func removeAll() {
+        values.removeAll()
     }
 }
 
