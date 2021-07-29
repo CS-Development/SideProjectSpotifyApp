@@ -12,6 +12,7 @@ final class AlbumsViewModel {
     
     var albumsItems: [AlbumItemDTO]
     var service: SpotifyApiService
+    var onUpdate: () -> Void = { }
     
     init(service: SpotifyApiService) {
         self.service = service
@@ -26,7 +27,13 @@ final class AlbumsViewModel {
             case let .success(dto):
                 print(dto)
                 self.albumsItems = dto.albums.items
+                self.onUpdate()
             }
         }
     }
+    
+    func numberOfItemsInSection(section: Int) -> Int {
+        return albumsItems.count
+    }
+    
 }
