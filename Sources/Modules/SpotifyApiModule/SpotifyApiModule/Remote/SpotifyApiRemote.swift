@@ -21,6 +21,12 @@ public class SpotifyApiRemote: SpotifyApiService {
                                       , forKey: "Authorization")
     }
     
+    public func setAccessToken(_ token: AccessTokenDTO) {
+        self.accessToken = token
+        self.client.requestHttpHeaders.add(value: "\(accessToken.tokenType) \(accessToken.accessToken)"
+                                      , forKey: "Authorization")
+    }
+    
     public func getAllNewReleases(completion: @escaping (SearchResult) -> Void) {
         
         client.makeRequest(toURL: url.appendingPathComponent("browse/new-releases"), withHttpMethod: .get) { [weak self] result in

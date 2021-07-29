@@ -12,7 +12,7 @@ public protocol SpotifyApiService {
     
     typealias SearchResult = Swift.Result<AlbumsAnswerDTO, ServiceError>
 
-    //func setAccessToken(_ token: AccessTokenDTO)
+    func setAccessToken(_ token: AccessTokenDTO)
     func getAllNewReleases(completion: @escaping (SearchResult) -> Void)
     
     

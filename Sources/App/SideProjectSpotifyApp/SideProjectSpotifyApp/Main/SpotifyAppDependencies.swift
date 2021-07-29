@@ -51,7 +51,18 @@ class SpotifyAppDependencies {
     }
     
     func start() {
-        setRootViewController(makeMainTabBarController())
+        
+        accountService.getApiToken { result in
+            switch result {
+            case let .failure(error):
+                print(error)
+            case let .success(tokenDTO):
+                self.service.setAccessToken(SpotifyApiModule.AccessTokenDTO(accessToken: tokenDTO.accessToken,
+                                                                            tokenType: tokenDTO.tokenType,
+                                                                            expiresIn: tokenDTO.expiresIn))
+            }
+        }
+        self.setRootViewController(self.makeMainTabBarController())
     }
     
     func makeMainViewController() -> UIViewController {
