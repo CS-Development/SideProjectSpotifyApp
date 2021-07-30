@@ -17,13 +17,13 @@ class AlbumsViewController: UIViewController {
     let viewModel: AlbumsViewModel
     var router: AlbumsViewControllerRouting
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    var delgate: AlbumsCollectionViewDelagate
+    var delegate: AlbumsCollectionViewDelegate
     var dataSource: AlbumsCollectionViewDataSource
 
     init(viewModel: AlbumsViewModel, router: AlbumsViewControllerRouting) {
         self.viewModel = viewModel
         self.router = router
-        self.delgate = AlbumsCollectionViewDelagate(viewModel: viewModel)
+        self.delegate = AlbumsCollectionViewDelegate(viewModel: viewModel)
         self.dataSource = AlbumsCollectionViewDataSource(viewModel: viewModel)
         
         super.init(nibName: nil, bundle: nil)
@@ -56,7 +56,7 @@ class AlbumsViewController: UIViewController {
     private func setupViews() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
-        collectionView.delegate = delgate
+        collectionView.delegate = delegate
         collectionView.dataSource = dataSource
     }
     
@@ -76,7 +76,7 @@ class AlbumsViewController: UIViewController {
 
 
 //MARK: Delegate
-class AlbumsCollectionViewDelagate: NSObject, UICollectionViewDelegateFlowLayout {
+class AlbumsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
     
     let viewModel: AlbumsViewModel
     
