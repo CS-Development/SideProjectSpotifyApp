@@ -55,28 +55,6 @@ class SpotifyAppDependencies {
     }
     
     func start() {
-        
-        //TODO: show a loading screen...
-        /*
-        let vc = UIViewController()
-        vc.view.backgroundColor = .white
-        setRootViewController(vc)
-        
-        accountService.getApiToken { result in
-            switch result {
-            case let .failure(error):
-                print(error)
-            case let .success(tokenDTO):
-                self.service.setAccessToken(SpotifyApiModule.AccessTokenDTO(accessToken: tokenDTO.accessToken,
-                                                                            tokenType: tokenDTO.tokenType,
-                                                                            expiresIn: tokenDTO.expiresIn))
-                DispatchQueue.main.async {
-                    self.setRootViewController(self.makeMainTabBarController())
-                }
-                
-            }
-        }
-        */
         self.setRootViewController(self.makeMainTabBarController())
     }
     
