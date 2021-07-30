@@ -38,6 +38,10 @@ class SpotifyAppDependencies {
                                        clientSecret: spotifyAccountClientSecret)
     }()
     
+    private lazy var authDecoratorService: SpotifyApiServiceAuthDecorator = {
+       return SpotifyApiServiceAuthDecorator(service: service, authService: accountService)
+    }()
+    
     public func setScene(_ scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
@@ -52,7 +56,8 @@ class SpotifyAppDependencies {
     
     func start() {
         
-        //TODO: show a loading screen... 
+        //TODO: show a loading screen...
+        /*
         let vc = UIViewController()
         vc.view.backgroundColor = .white
         setRootViewController(vc)
@@ -71,10 +76,13 @@ class SpotifyAppDependencies {
                 
             }
         }
+        */
+        self.setRootViewController(self.makeMainTabBarController())
     }
     
     func makeMainViewController() -> UIViewController {
-        let viewModel = MainViewModel(service: service)
+        
+        let viewModel = MainViewModel(service: authDecoratorService)
         let router = ViewControllerRouter()
         
         let viewController = ViewController(viewModel: viewModel, router: router)
