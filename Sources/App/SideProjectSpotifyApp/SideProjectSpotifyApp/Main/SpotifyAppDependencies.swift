@@ -79,18 +79,33 @@ class SpotifyAppDependencies {
         
         let viewController = ViewController(viewModel: viewModel, router: router)
         let navigationController = UINavigationController(rootViewController: viewController)
-        
         router.navigationController = navigationController
+        
+        navigationController.title = "Main"
+        navigationController.tabBarItem.image = UIImage(systemName: "music.note.house")
+        return navigationController
+    }
+    
+    func makeAlbumsViewController() -> UIViewController {
+        let viewModel = AlbumsViewModel(service: service)
+        let router = AlbumsViewControllerRouter()
+        
+        let viewController = AlbumsViewController(viewModel: viewModel, router: router)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        router.navigationController = navigationController
+        
+        navigationController.title = "Albums"
+        navigationController.tabBarItem.image = UIImage(systemName: "music.note.list")
         return navigationController
     }
     
     func makeMainTabBarController() -> UIViewController {
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .yellow
         
         let vc2 = UIViewController()
         vc2.view.backgroundColor = .blue
-        let tabController = MainTabBarController(viewControllers: [makeMainViewController(), vc1, vc2])
+        let tabController = MainTabBarController(viewControllers: [makeMainViewController(),
+                                                                   makeAlbumsViewController(),
+                                                                   vc2])
         return tabController
     }
 }
@@ -103,6 +118,16 @@ class SpotifyAppDependencies {
 //        //setRootViewController(vc)
 //    }
 //}
+
+class AlbumsViewControllerRouter: AlbumsViewControllerRouting {
+    var navigationController: UINavigationController?
+    
+    func routeToDetailViewController() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .cyan
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
 
 class ViewControllerRouter: ViewControllerRouting {
     var navigationController: UINavigationController?
