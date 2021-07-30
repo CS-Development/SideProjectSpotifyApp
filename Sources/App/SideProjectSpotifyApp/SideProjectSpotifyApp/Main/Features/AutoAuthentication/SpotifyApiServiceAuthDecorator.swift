@@ -24,6 +24,8 @@ class SpotifyApiServiceAuthDecorator: SpotifyApiService {
     }
     
     func getAllNewReleases(completion: @escaping (SearchResult) -> Void) {
+        autoAuthenticateRequest(function: service.getAllNewReleases, completion: completion)
+        /*
         service.getAllNewReleases { result in
             switch result {
             case let .failure(error):
@@ -49,10 +51,13 @@ class SpotifyApiServiceAuthDecorator: SpotifyApiService {
             case .success(_):
                 completion(result)
             }
-        }
+        }*/
     }
     
     func getAllCategories(completion: @escaping (SearchCategoriesResult) -> Void) {
+        autoAuthenticateRequest(function: service.getAllCategories, completion: completion)
+        
+        /*
         service.getAllCategories { result in
             switch result {
             case let .failure(error):
@@ -78,10 +83,13 @@ class SpotifyApiServiceAuthDecorator: SpotifyApiService {
             case .success(_):
                 completion(result)
             }
-        }
+        }*/
     }
     
     func getAllFeaturedPlaylists(completion: @escaping (SearchPlaylistsResult) -> Void) {
+        autoAuthenticateRequest(function: service.getAllFeaturedPlaylists, completion: completion)
+
+        /*
         service.getAllFeaturedPlaylists { result in
             switch result {
             case let .failure(error):
@@ -97,6 +105,38 @@ class SpotifyApiServiceAuthDecorator: SpotifyApiService {
                                                                                 tokenType: token.tokenType,
                                                                                 expiresIn: token.expiresIn))
                             self.getAllFeaturedPlaylists(completion: completion)
+                        }
+                    }
+
+                default:
+                    completion(result)
+                }
+                break
+            case .success(_):
+                completion(result)
+            }
+        }*/
+    }
+    
+    typealias MethodHandler<T> = (_ completion: @escaping (GenericResult<T>) -> Void)  -> Void
+    typealias GenericResult<T> = Swift.Result<T, ServiceError>
+    func autoAuthenticateRequest<T>( function: @escaping MethodHandler<T>,
+                                 completion: @escaping (GenericResult<T>) -> Void) {
+        function { result in
+            switch result {
+            case let .failure(error):
+                switch error {
+                case .notAuthorized:
+                    
+                    self.authService.getApiToken { tokenResult in
+                        switch tokenResult {
+                        case .failure(_):
+                            completion(result)
+                        case let .success(token):
+                            self.setAccessToken(SpotifyApiModule.AccessTokenDTO(accessToken: token.accessToken,
+                                                                                tokenType: token.tokenType,
+                                                                                expiresIn: token.expiresIn))
+                            function(completion)
                         }
                     }
 
