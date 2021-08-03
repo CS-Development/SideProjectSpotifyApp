@@ -38,8 +38,19 @@ class SpotifyAppDependencies {
                                        clientSecret: spotifyAccountClientSecret)
     }()
     
-    private lazy var authDecoratorService: SpotifyApiServiceAuthDecorator = {
+    private lazy var authDecoratorService: SpotifyApiService = {
        return SpotifyApiServiceAuthDecorator(service: service, authService: accountService)
+    }()
+    
+    private lazy var localService: SpotifyApiService = {
+        // TODO create a local version of SpotifyApiService
+       return SpotifyApiServiceAuthDecorator(service: service, authService: accountService)
+    }()
+    
+    private lazy var compositeFallbackService: SpotifyApiService = {
+        let service = CompositeFallbackService(remote: authDecoratorService,
+                                               local: localService)
+        return service
     }()
     
     public func setScene(_ scene: UIScene) {
@@ -60,7 +71,7 @@ class SpotifyAppDependencies {
     
     func makeMainViewController() -> UIViewController {
         
-        let viewModel = MainViewModel(service: authDecoratorService)
+        let viewModel = MainViewModel(service: compositeFallbackService)
         let router = ViewControllerRouter()
         
         let viewController = ViewController(viewModel: viewModel, router: router)
@@ -73,7 +84,9 @@ class SpotifyAppDependencies {
     }
     
     func makeAlbumsViewController() -> UIViewController {
-        let viewModel = AlbumsViewModel(service: service)
+        
+        let viewModel = AlbumsViewModel(service: compositeFallbackService)
+        
         let router = AlbumsViewControllerRouter()
         
         let viewController = AlbumsViewController(viewModel: viewModel, router: router)
