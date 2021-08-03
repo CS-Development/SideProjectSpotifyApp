@@ -40,6 +40,40 @@ An open source side project to develop an iOS App that makes use of the public S
   - [common modules](Docs/Modules/001_CommonModules.md) 
   - [specific modules](Docs/Modules/002_SpecificModules.md)
 
+
+
+**BDD - Behaviour Driven Development**
+
+**Agile Development - - Backlog - Sprints -  Use cases / user stories -> Tasks**
+
+**Use Cases**
+
+**User Stories**
+
+**Scenario1: Start the application for the first time**
+
+**Scenario1: Start the application for the second time**
+
+**As a user, when I start the App I want to see the list of new releases**
+
+**BDD Specs**
+
+
+
+**GIVEN Start the application for the first time**
+
+**WHEN the App start**
+
+**THEN show the list of new releases**
+
+
+
+**TDD - Test Driven Development**
+
+
+
+
+
 ## Prerequisites
 
 ## Getting Started
