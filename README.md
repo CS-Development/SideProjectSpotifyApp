@@ -6,11 +6,14 @@ An open source side project to develop an iOS App that makes use of the public S
 ## Table of Contents
 
 - [Who we are](#who-we-are)
+- [What we do](#what-we-do)
 - [Project plan](Docs/ProjectPlan/000_ProjectPlan.md)
 - [Brainstormings](Docs/Brainstormings/000_Brainstormings.md)
 - [KATAs](Docs/Katas/000_Katas.md)
 - [Architecture](Docs/Architecture/000_Architecture.md)
 - [](#)
+
+
 
 ## Who We Are
 
@@ -24,13 +27,17 @@ An open source side project to develop an iOS App that makes use of the public S
     christian.slanzi@gmail.com
 
   - MasterBozzo
+    
 
 * Link to Slack
+  
 
 * website, online documentation
   https://github.com/CS-Development/SideProjectSpotifyApp 
 
-## Features
+
+
+## What we do
 
 * Project explanation
 
@@ -42,43 +49,21 @@ An open source side project to develop an iOS App that makes use of the public S
 
 
 
-**BDD - Behaviour Driven Development**
+## Features
 
-**Agile Development - - Backlog - Sprints -  Use cases / user stories -> Tasks**
+* BDD Specifications 
 
-**Use Cases**
-
-**User Stories**
-
-**Scenario1: Start the application for the first time**
-
-**Scenario1: Start the application for the second time**
-
-**As a user, when I start the App I want to see the list of new releases**
-
-**BDD Specs**
-
-
-
-**GIVEN Start the application for the first time**
-
-**WHEN the App start**
-
-**THEN show the list of new releases**
-
-
-
-**TDD - Test Driven Development**
-
-
-
-
+  - [App Case Study](Docs/Specs/000_CaseStudy.md)
 
 ## Prerequisites
+
+
 
 ## Getting Started
 
 * Installation guidance
+
+
 
 ## Project Structure
 
@@ -86,11 +71,15 @@ An open source side project to develop an iOS App that makes use of the public S
 | ---- | ----------- |
 |      |             |
 
+
+
 ## List of Packages
 
 | Package | Description |
 | ------- | ----------- |
 |         |             |
+
+
 
 ## Useful Tools and Resources
 
@@ -101,38 +90,67 @@ An open source side project to develop an iOS App that makes use of the public S
 - Video Conference:
   - Google Meet / Whereby.com 
 
+
+
 ## Recommended Design Resources
+
+
 
 ## Recommended Libraries
 
+
+
 ## Pro Tips
+
+
 
 ## FAQ
 
+
+
 ## How It Works (Mini Guides)
+
+
 
 ## Deployment
 
+
+
 ## Helpful Resources
+
+
 
 ## Contributing
 
 Please follow this documentation in order to fork your copy of the project and to push your pull requests:
 [git-fork-update](Docs/git-fork-update/gistfile1.md)
 
+
+
 ## Contributors
+
+- Christian Slanzi
+- MasterBozzo
+
+
 
 ## Code of Conduct
 
 [Code of Conduct](./CODE_OF_CONDUCT.md)
 
+
+
 ## Changelog
+
+
 
 ## License  
 
 SideProjectSpotifyApp is licensed under the
 
 ###### MIT License
+
+
 
 :top: <sub>[**back to top**](#table-of-contents)</sub>
 
