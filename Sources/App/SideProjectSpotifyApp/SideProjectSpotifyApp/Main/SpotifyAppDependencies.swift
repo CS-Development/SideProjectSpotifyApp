@@ -84,12 +84,9 @@ class SpotifyAppDependencies {
     }
     
     func makeAlbumsViewController() -> UIViewController {
-        
-        let viewModel = AlbumsViewModel(service: compositeFallbackService)
-        
         let router = AlbumsViewControllerRouter()
-        
-        let viewController = AlbumsViewController(viewModel: viewModel, router: router)
+        let viewModel = AlbumsViewModel(service: compositeFallbackService, router: router)
+        let viewController = AlbumsViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
         router.navigationController = navigationController
         
@@ -121,10 +118,10 @@ class SpotifyAppDependencies {
 class AlbumsViewControllerRouter: AlbumsViewControllerRouting {
     var navigationController: UINavigationController?
     
-    func routeToDetailViewController() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .cyan
-        self.navigationController?.pushViewController(vc, animated: true)
+    func routeToDetailViewController(album: AlbumItemDTO) {
+        let viewModel = AlbumDetailViewModel(album: album)
+        let vc = AlbumDetailViewController(viewModel: viewModel)
+        self.navigationController?.present(vc, animated: true, completion: nil)
     }
 }
 
