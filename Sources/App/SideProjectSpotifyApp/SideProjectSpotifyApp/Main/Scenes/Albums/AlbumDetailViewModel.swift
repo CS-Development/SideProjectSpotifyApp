@@ -21,11 +21,13 @@ class AlbumDetailViewModel {
     }()
     
     func loadImageData(urlString: String) -> Data? {
-        #warning("unwrap safe URL instead of force")
-        if let data = try? Data(contentsOf: URL(string: urlString)!) {
-            return data
+        
+        guard let url = URL(string: urlString),
+              let data = try? Data(contentsOf: url) else {
+            return nil
         }
-        return nil
+        
+        return data
     }
     
 }
