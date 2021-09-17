@@ -24,15 +24,15 @@ class AlbumDetailViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "This is test album name"
-        label.font = UIFont.systemFont(ofSize: 32, weight: .regular)
-        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 26, weight: .regular)
+        label.numberOfLines = 0
         return label
     }()
     
     private let releaseDateLabel: UILabel = {
         let label = UILabel()
         label.text = "This is test album releaseDate"
-        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         return label
     }()
     
