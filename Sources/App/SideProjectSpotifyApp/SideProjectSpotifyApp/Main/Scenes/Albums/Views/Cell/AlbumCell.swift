@@ -40,7 +40,7 @@ class AlbumCell: UICollectionViewCell {
     
     func update(viewModel: AlbumCellViewModel) {
         titleLabel.text = viewModel.title
-        albumImage.image = UIImage(data: viewModel.image)
+        albumImage.image = UIImage(data: viewModel.image)?.sameAspectRatio(newHeight: 100)
     }
     
     private func setupViews(){
