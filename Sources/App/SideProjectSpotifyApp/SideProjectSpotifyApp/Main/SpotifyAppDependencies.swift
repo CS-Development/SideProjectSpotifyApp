@@ -121,7 +121,7 @@ class AlbumsViewControllerRouter: AlbumsViewControllerRouting {
     func routeToDetailViewController(album: AlbumItemDTO) {
         let viewModel = AlbumDetailViewModel(album: album)
         let vc = AlbumDetailViewController(viewModel: viewModel)
-        self.navigationController?.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
