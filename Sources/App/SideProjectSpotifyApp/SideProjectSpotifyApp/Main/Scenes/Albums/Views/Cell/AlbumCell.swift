@@ -11,9 +11,9 @@ class AlbumCell: UICollectionViewCell {
     
     let cornerRadiusValue: CGFloat = 10
     
-   private let wrapperView: UIView = {
-       let view = UIView()
-        view.backgroundColor = .white
+    private let wrapperView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
         view.clipsToBounds = true
         return view
     }()
@@ -22,6 +22,7 @@ class AlbumCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "This is test album name"
         label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.textColor = .label
         return label
     }()
     
@@ -40,11 +41,12 @@ class AlbumCell: UICollectionViewCell {
     
     func update(viewModel: AlbumCellViewModel) {
         titleLabel.text = viewModel.title
-        albumImage.image = UIImage(data: viewModel.image)
+        loadImage(viewModel: viewModel) { image in
+            self.albumImage.image = image?.sameAspectRatio(newHeight: 50)
+        }
     }
     
     private func setupViews(){
-        backgroundColor = .white
         layer.cornerRadius = cornerRadiusValue
         wrapperView.layer.cornerRadius = cornerRadiusValue
         layer.addShadow()
@@ -71,7 +73,7 @@ class AlbumCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             albumImage.leftAnchor.constraint(equalTo: wrapperView.leftAnchor),
-            albumImage.topAnchor.constraint(equalTo: wrapperView.topAnchor),
+            albumImage.topAnchor.constraint(equalTo: wrapperView.topAnchor, constant: 20),
             albumImage.rightAnchor.constraint(equalTo: wrapperView.rightAnchor),
             albumImage.heightAnchor.constraint(equalToConstant: 140)
         ])
@@ -90,5 +92,32 @@ class AlbumCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    private let imageQueue = DispatchQueue(label: "imageQueue", qos: .background)
+    static let imageCache = NSCache<NSString, UIImage>()
+    
+    func loadImage(viewModel: AlbumCellViewModel, completion: @escaping (UIImage?) -> Void) {
+        //check image value of chache key
+        if let image = Self.imageCache.object(forKey: viewModel.title as NSString) {
+            completion(image)
+        } else {
+            
+            imageQueue.async {
+                guard let image = UIImage(data: viewModel.image) else {
+                    completion(nil)
+                    return
+                }
+                
+                Self.imageCache.setObject(image, forKey: viewModel.title as NSString)
+                
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+                
+            }
+            
+        }
     }
 }

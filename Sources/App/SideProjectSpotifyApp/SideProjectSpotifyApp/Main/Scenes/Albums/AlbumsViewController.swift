@@ -6,23 +6,22 @@
 //
 
 import UIKit
+import SpotifyApiModule
 
 protocol AlbumsViewControllerRouting {
     var navigationController: UINavigationController? { set get }
-    func routeToDetailViewController()
+    func routeToDetailViewController(album: AlbumItemDTO)
 }
 
 class AlbumsViewController: UIViewController {
     
     let viewModel: AlbumsViewModel
-    var router: AlbumsViewControllerRouting
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     var delegate: AlbumsCollectionViewDelegate
     var dataSource: AlbumsCollectionViewDataSource
 
-    init(viewModel: AlbumsViewModel, router: AlbumsViewControllerRouting) {
+    init(viewModel: AlbumsViewModel) {
         self.viewModel = viewModel
-        self.router = router
         self.delegate = AlbumsCollectionViewDelegate(viewModel: viewModel)
         self.dataSource = AlbumsCollectionViewDataSource(viewModel: viewModel)
         
@@ -55,7 +54,7 @@ class AlbumsViewController: UIViewController {
     
     private func setupViews() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
     }
@@ -86,7 +85,7 @@ class AlbumsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width - 32, height: 200)
+        return CGSize(width: collectionView.frame.width - 32, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -95,6 +94,10 @@ class AlbumsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectAlbum(for: indexPath)
     }
 }
 
