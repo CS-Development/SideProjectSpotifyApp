@@ -11,9 +11,9 @@ class AlbumCell: UICollectionViewCell {
     
     let cornerRadiusValue: CGFloat = 10
     
-   private let wrapperView: UIView = {
-       let view = UIView()
-        view.backgroundColor = .white
+    private let wrapperView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
         view.clipsToBounds = true
         return view
     }()
@@ -22,6 +22,7 @@ class AlbumCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "This is test album name"
         label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.textColor = .label
         return label
     }()
     
@@ -40,11 +41,10 @@ class AlbumCell: UICollectionViewCell {
     
     func update(viewModel: AlbumCellViewModel) {
         titleLabel.text = viewModel.title
-        albumImage.image = UIImage(data: viewModel.image)?.sameAspectRatio(newHeight: 100)
+        albumImage.image = UIImage(data: viewModel.image)?.sameAspectRatio(newHeight: 50)
     }
     
     private func setupViews(){
-        backgroundColor = .white
         layer.cornerRadius = cornerRadiusValue
         wrapperView.layer.cornerRadius = cornerRadiusValue
         layer.addShadow()
@@ -71,7 +71,7 @@ class AlbumCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             albumImage.leftAnchor.constraint(equalTo: wrapperView.leftAnchor),
-            albumImage.topAnchor.constraint(equalTo: wrapperView.topAnchor),
+            albumImage.topAnchor.constraint(equalTo: wrapperView.topAnchor, constant: 20),
             albumImage.rightAnchor.constraint(equalTo: wrapperView.rightAnchor),
             albumImage.heightAnchor.constraint(equalToConstant: 140)
         ])

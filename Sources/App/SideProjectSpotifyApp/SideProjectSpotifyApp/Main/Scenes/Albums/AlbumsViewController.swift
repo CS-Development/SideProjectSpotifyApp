@@ -54,7 +54,7 @@ class AlbumsViewController: UIViewController {
     
     private func setupViews() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
     }
@@ -85,7 +85,7 @@ class AlbumsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width - 32, height: 200)
+        return CGSize(width: collectionView.frame.width - 32, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -26,6 +26,7 @@ class AlbumDetailViewController: UIViewController {
         label.text = "This is test album name"
         label.font = UIFont.systemFont(ofSize: 26, weight: .regular)
         label.numberOfLines = 0
+        label.textColor = .label
         return label
     }()
     
@@ -33,6 +34,7 @@ class AlbumDetailViewController: UIViewController {
         let label = UILabel()
         label.text = "This is test album releaseDate"
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        label.textColor = .label
         return label
     }()
     
@@ -67,7 +69,7 @@ class AlbumDetailViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         [stackView, titleLabel, albumImage, releaseDateLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
