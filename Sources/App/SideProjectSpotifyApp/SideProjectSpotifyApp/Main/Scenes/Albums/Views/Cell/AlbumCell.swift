@@ -41,7 +41,9 @@ class AlbumCell: UICollectionViewCell {
     
     func update(viewModel: AlbumCellViewModel) {
         titleLabel.text = viewModel.title
-        albumImage.image = UIImage(data: viewModel.image)?.sameAspectRatio(newHeight: 50)
+        loadImage(viewModel: viewModel) { image in
+            self.albumImage.image = image?.sameAspectRatio(newHeight: 50)
+        }
     }
     
     private func setupViews(){
@@ -90,5 +92,32 @@ class AlbumCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    private let imageQueue = DispatchQueue(label: "imageQueue", qos: .background)
+    static let imageCache = NSCache<NSString, UIImage>()
+    
+    func loadImage(viewModel: AlbumCellViewModel, completion: @escaping (UIImage?) -> Void) {
+        //check image value of chache key
+        if let image = Self.imageCache.object(forKey: viewModel.title as NSString) {
+            completion(image)
+        } else {
+            
+            imageQueue.async {
+                guard let image = UIImage(data: viewModel.image) else {
+                    completion(nil)
+                    return
+                }
+                
+                Self.imageCache.setObject(image, forKey: viewModel.title as NSString)
+                
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+                
+            }
+            
+        }
     }
 }
