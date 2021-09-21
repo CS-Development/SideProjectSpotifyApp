@@ -99,10 +99,19 @@ class SpotifyAppDependencies {
         
         let vc2 = UIViewController()
         vc2.view.backgroundColor = .blue
-        let tabController = MainTabBarController(viewControllers: [makeMainViewController(),
+        let tabController = MainTabBarController(viewControllers: [makeHomeViewController(),
                                                                    makeAlbumsViewController(),
                                                                    vc2])
         return tabController
+    }
+    
+    func makeHomeViewController() -> UIViewController {
+        let vc = HomeViewController()
+        vc.title = "Home"
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.title = "Home"
+        navigationController.tabBarItem.image = UIImage(systemName: "house")
+        return navigationController
     }
 }
 
