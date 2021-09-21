@@ -7,6 +7,31 @@
 
 import UIKit
 
+
+struct NewReleasesCellViewModel {
+    
+}
+
+enum SectionType {
+    case newReleases(viewModels: [NewReleasesCellViewModel])
+    case featuredPlaylists
+    case categories
+    
+    var title: String {
+        switch self {
+        case .newReleases:
+            return "New Releases"
+        case .featuredPlaylists:
+            return "New Featured Playlists"
+        case .categories:
+            return "Categories"
+        }
+    }
+}
+
+//sections[indexPath.section].title
+
+
 final class HomeViewController: UIViewController {
     
     // New Releases
@@ -14,6 +39,8 @@ final class HomeViewController: UIViewController {
     // Featured playlists
     
     // ....
+    
+    private var sections = [SectionType]()
     
     private var collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection? in
         return HomeViewController.createSectionLayout(section: sectionIndex)
@@ -31,7 +58,7 @@ final class HomeViewController: UIViewController {
             item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
             let horizontalGroup = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .absolute(300),
+                    widthDimension: .fractionalWidth(0.7),
                     heightDimension: .absolute(300)
                 ),
                 subitem: item,
@@ -39,6 +66,30 @@ final class HomeViewController: UIViewController {
             
             let section = NSCollectionLayoutSection(group: horizontalGroup)
             section.orthogonalScrollingBehavior = .groupPaging
+            return section
+        case 1:
+            let item = NSCollectionLayoutItem(
+                layoutSize: NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1.0),
+                    heightDimension: .fractionalHeight(1.0)))
+            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+            let verticalGroup = NSCollectionLayoutGroup.vertical(
+                layoutSize: NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1.0),
+                    heightDimension: .absolute(300)
+                ),
+                subitem: item,
+                count: 3)
+            let horizontalGroup = NSCollectionLayoutGroup.horizontal(
+                layoutSize: NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.5),
+                    heightDimension: .absolute(300)
+                ),
+                subitem: verticalGroup,
+                count: 1)
+            
+            let section = NSCollectionLayoutSection(group: horizontalGroup)
+            section.orthogonalScrollingBehavior = .continuous
             return section
         default:
             let item = NSCollectionLayoutItem(
@@ -71,6 +122,12 @@ final class HomeViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell3")
+        
+        //viewModel.getFeaturedPlaylists()
+        //viewModel.getNewReleases()
+        //viewModel.getCategories()
     }
     
     override func viewDidLayoutSubviews() {
@@ -81,7 +138,7 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         10
@@ -92,6 +149,8 @@ extension HomeViewController: UICollectionViewDataSource {
         switch indexPath.section {
         case 0:
             cell.backgroundColor = .systemYellow
+        case 1:
+            cell.backgroundColor = .systemPink
         default:
             cell.backgroundColor = .systemGray
         }
