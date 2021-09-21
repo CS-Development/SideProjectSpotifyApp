@@ -8,9 +8,9 @@
 import NetworkingService
 
 public struct PlaylistItemDTO: DTO {
-    
+    //TODO
     public var collaborative: Bool
-    public var itemDescription: String?
+    public var itemDescription: String? //TODO: fix this in description
     public var externalUrls: ExternalUrlObjectDTO
     public var href: String
     public var id: String

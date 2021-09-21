@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24301BA826FA5D27000C2621 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24301BA726FA5D27000C2621 /* GenericTableViewController.swift */; };
 		2430DE5226B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; };
 		2430DE5326B1E0AF00D7763F /* SpotifyAccountApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2446F4FA26B07D6D00A67703 /* SpotifyAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24301BA726FA5D27000C2621 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2430DE5126B1E0AF00D7763F /* SpotifyAccountApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyAccountApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2446F4F926B07D6D00A67703 /* SpotifyAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppDependencies.swift; sourceTree = "<group>"; };
 		2446F4FD26B082A400A67703 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24301BA526FA4A79000C2621 /* AlbumDetails */ = {
+			isa = PBXGroup;
+			children = (
+				84F1D08726D801F700329401 /* AlbumDetailViewController.swift */,
+				84F1D08926D80EC000329401 /* AlbumDetailViewModel.swift */,
+			);
+			path = AlbumDetails;
+			sourceTree = "<group>";
+		};
+		24301BA626FA5D03000C2621 /* TrialCode */ = {
+			isa = PBXGroup;
+			children = (
+				24301BA726FA5D27000C2621 /* GenericTableViewController.swift */,
+			);
+			path = TrialCode;
+			sourceTree = "<group>";
+		};
 		2446F4F826B07CCC00A67703 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +166,7 @@
 			children = (
 				2446F4FC26B0827A00A67703 /* Main */,
 				24D2932626B9C9E40042C283 /* Albums */,
+				24301BA526FA4A79000C2621 /* AlbumDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -210,6 +230,7 @@
 		24677D2926A1B42200540181 /* SideProjectSpotifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				24301BA626FA5D03000C2621 /* TrialCode */,
 				2446F4F826B07CCC00A67703 /* Main */,
 				24677D2A26A1B42200540181 /* AppDelegate.swift */,
 				24677D2C26A1B42200540181 /* SceneDelegate.swift */,
@@ -271,8 +292,6 @@
 				24D2932826B9CA2C0042C283 /* Views */,
 				844B5D2D26B311D4009E71B0 /* AlbumsViewController.swift */,
 				844B5D2F26B3127E009E71B0 /* AlbumsViewModel.swift */,
-				84F1D08726D801F700329401 /* AlbumDetailViewController.swift */,
-				84F1D08926D80EC000329401 /* AlbumDetailViewModel.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -461,6 +480,7 @@
 				24677D2B26A1B42200540181 /* AppDelegate.swift in Sources */,
 				24677D2D26A1B42200540181 /* SceneDelegate.swift in Sources */,
 				84F1D08826D801F700329401 /* AlbumDetailViewController.swift in Sources */,
+				24301BA826FA5D27000C2621 /* GenericTableViewController.swift in Sources */,
 				844B5D3326B32241009E71B0 /* AlbumCell.swift in Sources */,
 				24D2933326B9D51A0042C283 /* CompositeFallbackService.swift in Sources */,
 				84F1D08A26D80EC000329401 /* AlbumDetailViewModel.swift in Sources */,

@@ -21,6 +21,8 @@ class AlbumDetailViewController: UIViewController {
     }
     
     
+    
+    // Header
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "This is test album name"
@@ -50,6 +52,51 @@ class AlbumDetailViewController: UIViewController {
         stack.spacing = 10
         return stack
     }()
+    
+    // songs table view
+    
+    // description view
+    
+    // songs story view
+    
+    
+    //table view
+        
+    
+    
+    // login
+    // register
+    // survey
+        //tableview
+            //cell views
+                // label
+                // input field
+    
+                // button
+    
+    // profile
+        // picture
+        // infos:
+            // name
+            // email
+                                    // mapping
+    //(GenericHeaderView) <- ViewModel<Type> <- User object
+    //                                       <- Album
+    
+                                // configure<Type>?
+    
+//    AlbumsVC
+//        AlbumsHeaderView
+//                    ViewModel
+//                    configure =  configure(with: album Album) { model.image = UIImage(album.imageUrl), model.title = album.title, model.subtitle = album.description}
+    
+    //(GenericFooterView)
+    
+    // settings
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
